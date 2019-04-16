@@ -1,0 +1,214 @@
+// Bootstrap
+@import "../bootstrap/sass/bootstrap";
+
+//.btn {
+//  border-radius:                    0px;
+//  -webkit-border-radius:            0px;
+//  -moz-border-radius:               0px;
+//}
+.bg-cargo-primary {
+  @extend .bg-primary; background-color: $color-cargo-primary;
+}
+.bg-request-primary {
+  @extend .bg-primary; background-color: $color-request-primary;
+}
+
+.bg-teal { @extend .bg-primary; background-color: $teal; }
+.bg-brown { @extend .bg-primary; background-color: $brown500; }
+.bg-cyan { @extend .bg-primary; background-color: $cyan; }
+.bg-orange { @extend .bg-primary; background-color: $orange; }
+.bg-purple { @extend .bg-primary; background-color: $purple; }
+.bg-indigo { @extend .bg-primary; background-color: $indigo; }
+.bg-green { @extend .bg-primary; background-color: $green; }
+.bg-yellow { @extend .bg-primary; background-color: $yellow; }
+.bg-blue { @extend .bg-primary; background-color: $blue; }
+.bg-gray-300 { @extend .bg-primary; background-color: $gray-300; }
+.bg-lime-500 { @extend .bg-primary; background-color: $lime500 !important; }
+.bg-cyan-500 { @extend .bg-primary; background-color: $cyan500 !important; }
+
+.text-gray-800 { @extend .text-primary; color: $gray-800 !important; }
+.text-gray-700 { @extend .text-primary; color: $gray-700 !important; }
+.text-gray-600 { @extend .text-primary; color: $gray-600 !important; }
+.text-gray-500 { @extend .text-primary; color: $gray-500 !important; }
+.text-gray-300 { @extend .text-primary; color: $gray-300 !important; }
+.text-gray-200 { @extend .text-primary; color: $gray-200 !important; }
+.text-orange { @extend .text-primary; color: $orange; }
+.text-green { @extend .text-primary; color: $green !important; }
+
+.border-gray-500 { @extend .border-primary; border-color: $gray-500; }
+.border-gray-400 { @extend .border-primary; border-color: $gray-400 !important; }
+.border-2 { border-width: 2px; }
+.border-3 { border-width: 3px; }
+
+.btn-cargo-primary {
+  @include button-variant($color-cargo-primary, $color-cargo-primary);
+}
+
+.btn-request-primary {
+  @include button-variant($color-request-primary, $color-request-primary);
+}
+
+.alert {
+  //position: fixed;
+  //bottom: 20px;
+  //left: 20px;
+  //z-index:9999;
+  ul {
+    margin: 0; padding: 0;
+  }
+}
+.alert .close {
+  @extend .rounded-circle;
+  @extend .text-center;
+  @extend .bg-white;
+  float: left!important;
+  position: relative;
+  right: 15px;
+  bottom: 8px;
+  margin: 0;
+  padding: 4px 5px 2px 5px!important;
+}
+
+//.btn-yellow {
+//  @include button-variant($yellow700, $yellow700);
+//}
+//
+//.btn-pink {
+//  @include button-variant($pink700, $pink700);
+//}
+//
+//.btn-orange {
+//  @include button-variant($orange700, $orange700);
+//}
+//
+//.btn-outline-orange {
+//  @include button-outline-variant($orange700, color-yiq($orange700), $orange700, $orange700);
+//}
+//
+//.btn-cyan {
+//  @include button-variant($cyan800, $cyan800);
+//}
+//
+//.btn-outline-cyan {
+//  @include button-outline-variant($cyan800, color-yiq($cyan800), $cyan800, $cyan800);
+//}
+.btn-teal {
+  @include button-variant($teal, $teal);
+}
+
+.btn-gray {
+  color: $gray-800!important;
+  @include button-variant($gray-300, $gray-300);
+}
+
+//.btn-circle-primary {
+//  color: $white!important;
+//  border-radius: 15%;
+//  @include button-variant($color-primary, $color-primary);
+//}
+
+.btn-link-gray {
+  @extend .btn-link;
+  color: $gray-800;
+  background-color: transparent;
+  &:hover {
+    color: darken($color-secondary, 2%);
+  }
+  &.active {
+    color: darken($color-secondary, 2%);
+  }
+}
+
+.btn-link-primary {
+  @extend .btn-link;
+  color: $gray-800;
+  background-color: transparent;
+  &:hover {
+    color: darken($color-primary, 2%);
+  }
+  &.active {
+    color: darken($color-primary, 2%);
+  }
+}
+
+.btn-link-secondary {
+  @extend .btn-link;
+  color: $color-secondary;
+  background-color: transparent;
+  &:hover {
+    color: darken($color-secondary, 10%);
+  }
+  &.active {
+    color: darken($color-secondary, 10%);
+  }
+}
+
+.btn-link-primary-active {
+  @extend .btn-link;
+  color: $gray-800;
+  background-color: transparent;
+  &:hover {
+    color: darken($color-primary, 2%);
+  }
+  &.active {
+    color: white;
+    background-color: darken($color-primary, 2%);
+  }
+}
+
+.custom-select {
+  background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat left 0.75rem center;
+  padding: 0.375rem 0.5rem 0.375rem 0.75rem;
+  background-size: 8px 10px;
+}
+
+.custom-control-label{
+  float: right;
+}
+
+// Nav drop down menu caret position fix
+.dropdown-toggle::after {
+  position: relative;
+  top: 3px;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+.text-underline {
+  @extend .border-bottom;
+  padding-bottom: 2px;
+  &:hover {
+    @extend .border-0;
+  }
+}
+
+.fa-1x {
+  //@extend .fa-2x;
+  font-size: 1.5em;
+}
+
+.font-12 {
+  font-size: 0.8em;
+}
+
+
+// Nav tabs
+.nav-tabs-custom {
+  @extend .nav-tabs;
+  li a {
+    color: $gray-700;
+  }
+  li > a.active {
+    color: $gray-800;
+    border-color: $gray-300!important;
+    background: $gray-300!important;
+  }
+}
+
+.tab-content-custom {
+  background: $gray-300;
+  .tab-pane {
+  }
+}

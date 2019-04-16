@@ -1,0 +1,435 @@
+<!doctype html>
+<html>
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--links-->
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--script-->
+    <script type="text/javascript" src="../../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <title> ویرایش اعلام بار </title>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Barnama Logo -->
+    <a class="navbar-brand" href="../home.html">
+        <img src="../../assets/images/logo.png" width="170" alt="">
+    </a>
+    <!-- Right navigation -->
+    <ul class="navbar-nav mr-5 d-none d-lg-inline-flex">
+        <li class="nav-item ml-4" data-toggle="tooltip" data-placement="bottom" title="به زودی...">
+            <a class="nav-item nav-link d-block text-center">
+                <img src="../../assets/images/truck.png" class="" alt="truck" height="25">
+                <br>
+                سفارش حمل بار
+            </a>
+        </li>
+        <li class="nav-item dropdown ml-4">
+            <a class="nav-item nav-link d-block text-center" href="../board/board.html">
+                <img src="../../assets/images/monitor.png" class="" alt="monitor" height="25">
+                <br>
+                تابلو بارنما
+            </a>
+        </li>
+        <li class="nav-item ml-2" data-toggle="tooltip" data-placement="bottom" title="به زودی...">
+            <a class="nav-item nav-link d-block text-center">
+                <img src="../../assets/images/box.png" class="" alt="truck" height="25">
+                <br>
+                خرده بار
+            </a>
+        </li>
+    </ul>
+    <!-- Left User / login controller -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav profile-navbar mr-auto">
+            <li class="nav-item ml-4">
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../auth/register.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user text-orange ml-1"></i>
+                            ورود / ثبت نام
+                            <i class="fa fa-angle-down text-orange"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <form action="" method="post" accept-charset="UTF-8">
+                                <div class="form-group text-right dropdown-item-no-link">
+                                    <input type="text" class="form-control" id="mobile" name="username" placeholder="شماره موبایل">
+                                </div>
+                                <div class="form-group text-right dropdown-item-no-link">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="رمز عبور">
+                                </div>
+                                <div class="dropdown-item-no-link">
+                                    <button type="submit" class="btn btn-block btn-primary mb-3">ورود</button>
+                                </div>
+                                <div class="form-check text-right dropdown-item-no-link">
+                                    <input type="checkbox" name="remember" id="remember-me">
+                                    <label for="remember-me">&nbsp;مرا به‌خاطر بسپار</label>
+                                </div>
+                                <a class="dropdown-item text-right dropdown-item-no-link" href="../auth/password/reset.html">
+                                    <i class="fa fa-angle-left ml-1 text-primary"></i>
+                                    بازیابی رمز عبور
+                                </a>
+                            </form>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item-no-link text-right mb-2">حساب کاربری ندارید؟
+                                <a href="../auth/register.html" class="btn btn-block btn-success mt-2">ثبت نام</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Left support -->
+        <ul class="navbar-nav contact-navbar pr-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div>
+                        <div class="icon d-table-cell align-middle"><i class="fa fa-phone fa-flip-horizontal ml-3 fa-1x text-orange"></i></div>
+                        <div class="text d-table-cell align-top text-right">
+                            <strong>تماس با ما</strong>
+                            <br>
+                            <span class="text-gray-500">۰۲۱۵۵۴۵۹۰۳۴</span>
+                        </div>
+                        <div class="icon d-table-cell align-middle"><i class="fa fa-angle-down text-orange"></i></div>
+                    </div>
+                </a>
+                <div class="dropdown-menu text-right">
+                    <div class="text-right dropdown-item-no-link">
+                        پشتیبانی ۲۴ ساعته
+                        <br>
+                        ۰۲۱۵۵۴۵۹۰۳۴
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-right" href="../pages/contact.html">
+                        تماس با ما
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="flex-center position-ref full-height" id="app">
+    <!--<p>حساب شما فعال نشده است. با استفاده از <a href="{{ route('profile.edit') }}" class="alert-link">این لینک</a> پروفایل خود را تکمیل کنید.</p>-->
+    <div class="container-fluid" id="dashboard">
+        <div class="row text-right">
+            <nav class="col-md-2 d-none d-md-block bg-dark sidebar m-0 p-0 border-left">
+                <div class="sidebar-sticky">
+                    <div class="sidebar-header m-0 p-3">
+                        <div class="profile-image text-center">
+                            <!--<img src="{{ asset('avatars/'.auth()->user()->avatar) }}" class="m-x-auto img-fluid rounded-circle img-thumbnail border-primary" width="85" alt="تصویر پروفایل">-->
+                            <i class="fa fa-user-circle-o fa-4x"></i>
+                        </div>
+                        <div class="profile-info mt-4">
+                            <div class="text-right"><span>آخرین ورود:</span>&nbsp;</div>
+                            <div class="text-right"><span>موبایل:</span>&nbsp;</div>
+                            <div class="text-right"><span>وضعیت:</span>&nbsp;</div>
+                            <div class="text-right"> <span><img src=""></span>نوع کاربر:<span>&nbsp;</span></div>
+                        </div>
+                    </div>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>ناحیه کاربری</span>
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-user"></i>
+                                پروفایل
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fa fa-cubes"></i>
+                                بارهای اعلامی
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="create.html">
+                                <i class="fa fa-cube"></i>
+                                اعلام بار
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>پشتیبانی</span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="fas fa-ticket-alt"></i>
+                                تیکت پشتیبانی
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/roles.html">
+                                <i class="fa fa-exclamation-circle"></i>
+                                قوانین و شرایط استفاده
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contact.html">
+                                <i class="fa fa-envelope"></i>
+                                ارتباط با ما
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span></span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="fas fa-sign-out-alt"></i>
+                                خروج
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pb-2 mb-3 border-bottom">
+                    <div>
+                        <a class="btn btn-link-secondary float-right"><i class="fa fa-chevron-right"></i></a>
+                        <h2 class="h2 float-right">ویرایش اعلام بار</h2>
+                        <!--<span class="badge badge-warning">پر کردن تمام گزینه‌ها الزامی است</span>-->
+                    </div>
+                    <div class="btn-toolbar mb-2 mb-md-0" dir="ltr">
+                        <div class="btn-group mr-2">
+                            <a class="btn btn-success d-flex align-items-center" href="create.html">ثبت درخواست</a>
+                            <a class="btn btn-outline-secondary d-flex align-items-center" href="">انصراف</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row m-y-2 justify-content-md-center">
+                        <div class="col-lg-8" id="cargo-request-form-container">
+                            <form id="regForm" action="/action_page.php">
+                                <div class="tab">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6 text-right">
+                                            <label for="cargo-type">نوع محموله</label>
+                                            <input type="text" class="form-control text-right" id="cargo-type" placeholder="مثل: مبلمان یا لوازم صنعتی">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="multi-service">تعداد سرویس</label>
+                                            <div class="form-group">
+                                                <select class="form-control custom-select" name="multi-service" id="multi-service">
+                                                    <option value="0">یک سرویس</option>
+                                                    <option value="1">چند سرویس</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4>مبدا</h4>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="provinceSource">استان</label>
+                                            <select id="provinceSource" class="form-control custom-select">
+                                                <option selected value="0">انتخاب استان</option>
+                                                <!-- v-if: Don't show province 'Everywhere' (Hame Ja) in Source input -->
+                                                <option>اصفهان</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="citySource">شهر</label>
+                                            <select id="citySource" class="form-control custom-select">
+                                                <option selected value="0">انتخاب شهر</option>
+                                                <option> اصفهان </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <h4>مقصد</h4>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="provinceDestination">استان</label>
+                                            <select id="provinceDestination" class="form-control custom-select">
+                                                <option selected value="0">انتخاب استان</option>
+                                                <option> تهران </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="cityDestination">شهر</label>
+                                            <select id="cityDestination" class="form-control custom-select">
+                                                <option selected value="0">انتخاب شهر</option>
+                                                <option> تهران </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab">
+                                    <h4>ناوگان حمل</h4>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="car">نوع ماشین</label>
+                                            <select id="car" class="form-control custom-select">
+                                                <option selected value="0">انتخاب ماشین</option>
+                                                <option> تریلی </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="carType">نوع بارگیر</label>
+                                            <select id="carType" class="form-control custom-select">
+                                                <option selected value="0">انتخاب بارگیر</option>
+                                                <option> راننده </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <h4>بارگیری</h4>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="weight">وزن محموله برحسب تن</label>
+                                            <label for="weight">تناژ قابل حمل برحسب تن</label>
+                                            <div class="input-group" dir="ltr">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">برحسب تن</span>
+                                                </div>
+                                                <input type="number" class="form-control" id="weight">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="datePickerInput">تاریخ بارگیری</label>
+                                            <div id="datePickerInput" class="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab">
+                                    <h4>قیمت</h4>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="priceType">نوع قیمت</label>
+                                            <select id="priceType" class="form-control custom-select">
+                                                <option selected value="0">انتخاب نوع قیمت</option>
+                                                <option>
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="price">قیمت</label>
+                                            <div class="input-group" dir="ltr">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">به تومان</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <h4>تماس</h4>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="phone">تلفن تماس</label>
+                                            <!--If user is Tester, thenshow plain input text to enter any phone number-->
+                                            <input type="tel" id="phone" name="phone" class="form-control">
+                                            <select id="phone" class="form-control custom-select">
+                                                <option selected value="0">انتخاب تلفن</option>
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <small>مبدا: </small><h5></h5>
+                                            <small>مقصد: </small><h5></h5>
+                                            <small>ناوگان: </small><h5><span></span></h5>
+                                            <small>تناژ قابل حمل: </small><h5> تن</h5>
+                                        </div>
+                                        <div class="col">
+                                            <small>تاریخ بارگیری: </small><h5></h5>
+                                            <small> قیمت: </small><h5><span> تومان</span></h5>
+                                            <small> تلفن: </small><h5></h5>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="description">توضیحات</label>
+                                            <textarea name="description" class="form-control" id="description" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div style="overflow:auto;">
+                                    <div style="float:right;">
+                                        <button type="button" class="btn btn-secondary" id="prevBtn" onclick="nextPrev(-1)">  <i class="fas fa-angle-right pt-1 pl-1"></i>قبلی</button>
+                                    </div>
+                                    <div style="float:left">
+                                        <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)"> بعدی <i class="fas fa-angle-left pt-1 pr-1"></i> </button>
+                                    </div>
+                                </div>
+                                <!-- Circles which indicates the steps of the form: -->
+                                <div style="text-align:center;margin-top:40px;">
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                </div>
+                                <br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="container-fluid footer-container">
+        <div class="row copyright-row bg-dark text-center p-2">
+            <div class="col text-right text-gray-500 mt-3">
+                تمام حقوق این وب سایت برای سامانه‌های هوشمند بارنما محفوظ است.
+            </div>
+            <div class="col text-left">
+                <span class="fa-stack fa-2x text-danger">
+                    <a href="mailto:barnama.org@gmail.com">
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fa fa-envelope fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-telegram fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-instagram fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../../assets/js/slide.js"></script>
+<script src="../../assets/js/app.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+</script>
+</body>
+</html>

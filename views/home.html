@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--links-->
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--script-->
+    <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <title> صفحه نخست </title>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Barnama Logo -->
+    <a class="navbar-brand" href="#">
+        <img src="../assets/images/logo.png" width="170" alt="">
+    </a>
+    <!-- Right navigation -->
+    <ul class="navbar-nav mr-5 d-none d-lg-inline-flex">
+        <li class="nav-item ml-4" data-toggle="tooltip" data-placement="bottom" title="به زودی...">
+            <a class="nav-item nav-link d-block text-center">
+                <img src="../assets/images/truck.png" class="" alt="truck" height="25">
+                <br>
+                سفارش حمل بار
+            </a>
+        </li>
+        <li class="nav-item dropdown ml-4">
+            <a class="nav-item nav-link d-block text-center" href="board/board.html">
+                <img src="../assets/images/monitor.png" class="" alt="monitor" height="25">
+                <br>
+                تابلو بارنما
+            </a>
+        </li>
+        <li class="nav-item ml-2" data-toggle="tooltip" data-placement="bottom" title="به زودی...">
+            <a class="nav-item nav-link d-block text-center">
+                <img src="../assets/images/box.png" class="" alt="truck" height="25">
+                <br>
+                خرده بار
+            </a>
+        </li>
+    </ul>
+    <!-- Left User / login controller -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav profile-navbar mr-auto">
+            <li class="nav-item ml-4">
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="auth/register.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user text-orange ml-1"></i>
+                            ورود / ثبت نام
+                            <i class="fa fa-angle-down text-orange"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <form action="" method="post" accept-charset="UTF-8">
+                                <div class="form-group text-right dropdown-item-no-link">
+                                    <input type="text" class="form-control" id="mobile" name="username" placeholder="شماره موبایل">
+                                </div>
+                                <div class="form-group text-right dropdown-item-no-link">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="رمز عبور">
+                                </div>
+                                <div class="dropdown-item-no-link">
+                                    <button type="submit" class="btn btn-block btn-primary mb-3">ورود</button>
+                                </div>
+                                <div class="form-check text-right dropdown-item-no-link">
+                                    <input type="checkbox" name="remember" id="remember-me">
+                                    <label for="remember-me">&nbsp;مرا به‌خاطر بسپار</label>
+                                </div>
+                                <a class="dropdown-item text-right dropdown-item-no-link" href="auth/password/reset.html">
+                                    <i class="fa fa-angle-left ml-1 text-primary"></i>
+                                    بازیابی رمز عبور
+                                </a>
+                            </form>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item-no-link text-right mb-2">حساب کاربری ندارید؟
+                                <a href="auth/register.html" class="btn btn-block btn-success mt-2">ثبت نام</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Left support -->
+        <ul class="navbar-nav contact-navbar pr-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div>
+                        <div class="icon d-table-cell align-middle"><i class="fa fa-phone fa-flip-horizontal ml-3 fa-1x text-orange"></i></div>
+                        <div class="text d-table-cell align-top text-right">
+                            <strong>تماس با ما</strong>
+                            <br>
+                            <span class="text-gray-500">۰۲۱۵۵۴۵۹۰۳۴</span>
+                        </div>
+                        <div class="icon d-table-cell align-middle"><i class="fa fa-angle-down text-orange"></i></div>
+                    </div>
+                </a>
+                <div class="dropdown-menu text-right">
+                    <div class="text-right dropdown-item-no-link">
+                        پشتیبانی ۲۴ ساعته
+                        <br>
+                        ۰۲۱۵۵۴۵۹۰۳۴
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-right" href="pages/contact.html">
+                        تماس با ما
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="flex-center position-ref full-height w-100" id="app">
+    <!--<p>حساب شما فعال نشده است. با استفاده از <a href="{{ route('profile.edit') }}" class="alert-link">این لینک</a> پروفایل خود را تکمیل کنید.</p>-->
+    <div class="container-fluid" id="main">
+        <div class="row home-first">
+            <div class="col-md-10 mx-auto">
+                <h2 class="h2 mt-5 pt-5 pb-4 text-center text-white">سامانه حمل و نقل آنلاین</h2>
+                <div class="row mt-5 justify-content-center d-flex">
+                    <div class="col-lg-2 col-xs-3">
+                        <div class="card text-center">
+                            <a data-toggle="tooltip" title="به زودی...">
+                                <div class="card-body box-shadow py-3">
+                            <span class="d-inline-block bg-gray-300 text-white py-2 px-2 rounded-circle border border-gray-400 border-3">
+                                <img src="../assets/images/truck.svg" alt="truck" height="80">
+                            </span>
+                                    <h6 class="font-weight-bold mt-2 m-0 p-0">سفارش حمل بار</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-xs-3">
+                        <div class="card text-center">
+                            <a href="board/board.html">
+                                <div class="card-body box-shadow py-3">
+                            <span class="d-inline-block bg-gray-300 text-white py-2 px-2 rounded-circle border border-gray-400 border-3">
+                                <img src="../assets/images/monitor.svg" alt="monitor" height="80">
+                            </span>
+                                    <h6 class="font-weight-bold mt-2 m-0 p-0">تابلو بارنما</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-xs-3">
+                        <div class="card text-center">
+                            <a data-toggle="tooltip" title="به زودی...">
+                                <div class="card-body box-shadow py-3">
+                            <span class="d-inline-block bg-gray-300 text-white py-2 px-2 rounded-circle border border-gray-400 border-3">
+                                <img src="../assets/images/box.svg" alt="box" height="80">
+                            </span>
+                                    <h6 class="font-weight-bold mt-2 m-0 p-0">خرده بار</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid justify-content-center d-flex align-items-end">
+                <a href="#home-second" class="d-flex mb-3 bounce">
+                    <!--<img src="images/double_arrow_down.png" alt="" height="25">-->
+                    <i class="fa fa-angle-double-down fa-2x text-white"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row home-second p-5" id="home-second">
+            <div class="col pb-4">
+                <div class="row m-5">
+                <div class="col">
+                    <h2 class="text-center text-gray-700">مزایا و امکانات سامانه‌های هوشمند بارنما</h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row mt-5 mb-3">
+                        <div class="col-6 text-center">
+                            <img src="../assets/images/monitor_2.png" alt="">
+                            <h5 class="mt-4 font-weight-bold">تابلو رایگان اعلام و درخواست بار</h5>
+                            <p>
+                                اعلام بار به صورت کاملا رایگان و دریافت پیشنهاد رانندگان
+                            </p>
+                        </div>
+                        <div class="col-6 text-center">
+                            <img src="../assets/images/truck_cash.png" alt="">
+                            <h5 class="mt-4 font-weight-bold">اختیار تعیین قیمت</h5>
+                            <p>
+                                امکان تعیین قیمت حمل بار برای صاحبان کالا و رانندگان
+                            </p>
+                        </div>
+                        <div class="col-6 text-center mt-5">
+                            <img src="../assets/images/mobile_phone.png" alt="">
+                            <h5 class="mt-4 font-weight-bold">کاربری آسان</h5>
+                            <p>
+                                کاربری آسان و دسترسی به امکانات سایت در همه جا
+                            </p>
+                        </div>
+                        <div class="col-6 text-center mt-5">
+                            <img src="../assets/images/online_support.png" alt="">
+                            <h5 class="mt-4 font-weight-bold">پشتیبانی شبانه‌روزی</h5>
+                            <p>
+                                ارائه مشاوره و پیشنهاد حمل کالا توسط اپراتورهای بارنما
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row home-second-2">
+            <div class="col pb-5 pt-3">
+                <div class="row mt-5">
+                    <div class="col">
+                        <h3 class="text-center text-white font-weight-bold">اپلیکیشن بارنما</h3>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col my-auto">
+                            <ul class="list-unstyled text-right mr-5">
+                                <li class="mt-2"><i class="fa fa-angle-left ml-2 text-white"></i>نمایش تراکنش‌های مالی مشتریان</li>
+                                <li class="mt-2"><i class="fa fa-angle-left ml-2 text-white"></i>نمایش به روز بارهای اعلام شده</li>
+                                <li class="mt-2"><i class="fa fa-angle-left ml-2 text-white"></i>امکان مشاهده آنلاین رانندگان</li>
+                                <li class="mt-2"><i class="fa fa-angle-left ml-2 text-white"></i>نمایش امتیاز رانندگان</li>
+                            </ul>
+                        </div>
+                        <div class="col text-center">
+                            <img src="../assets/images/mockup.png" height="600" alt="نمای اپلیکیشن بارنما">
+                        </div>
+                        <div class="col my-auto text-center">
+                            <a><img src="../assets/images/bazar-badge.png" height="50" alt="دریافت اپ بارنما از بازار"></a>
+                            <br>
+                            <a><img src="../assets/images/google-play-badge.png" height="75" alt="دریافت اپ بارنما از گوگل پلی"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row home-third py-4 mt-3">
+                <div class="col-lg-3">
+                    <div class="text-center">
+                        <img class="mb-4" src="../assets/images/logo.png" alt="لوگو بارنما">
+                    </div>
+                    <p class="text-justify font-12">
+                        شرکت سامانه‌های هوشمند بارنما از سال ۱۳۹۵ با هدف ساماندهی به بازار حمل و نقل بار آغاز به کار کرد. رویکرد این مجموعه ارتباط بی‌واسطه صاحب کالا و رانندگان ناوگان باری است تا به این شیوه هزینه‌های حمل و نقل شفاف و روند کار حمل بار تسریع شود.
+                        بارنما صرفا تابلو اعلام و درخواست بار شما کاربران محترم است. شما بی‌واسطه با صاحبان کالا، شرکت‌های حمل بار و رانندگان ارتباط خواهید گرفت و واسطه‌ای در میان نخواهد بود. تعیین قیمت، توافق در خصوص نحوه حمل بار، و سایر جزئیات بدون دخالت بارنما انجام می‌شود.
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="list-unstyled text-right mr-3">
+                        <li class="mb-2"><a href="pages/about.html" class="btn-link-primary"><i class="fa fa-angle-left ml-2 text-primary"></i>درباره ما</a></li>
+                        <li class="mb-2"><a href="pages/contact.html" class="btn-link-primary"><i class="fa fa-angle-left ml-2 text-primary"></i>تماس با ما</a></li>
+                        <li class="mb-2"><a href="" class="btn-link-primary"><i class="fa fa-angle-left ml-2 text-primary"></i>چرا بارنما</a></li>
+                        <li class="mb-2"><a href="pages/roles.html" class="btn-link-primary"><i class="fa fa-angle-left ml-2 text-primary"></i>قوانین و مقررات</a></li>
+                        <li class="mb-2"><a href="" class="btn-link-primary"><i class="fa fa-angle-left ml-2 text-primary"></i>راهنما</a></li>
+                        <li class="mb-2"><a href="" class="btn-link-primary"><i class="fa fa-angle-left ml-2 text-primary"></i>پرسش و پاسخ</a></li>
+                        <li class="mb-2"><a href="" class="btn-link-primary"><i class="fa fa-angle-left ml-2 text-primary"></i>فرصت‌های شغلی</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-4">
+                    <div class="col-md">
+                        <h5 class="my-4 text-center">دریافت اپلیکیشن بارنما</h5>
+                        <p class="text-center">
+                            <a><img src="../assets/images/bazar-badge.png" height="40" alt="دریافت اپ بارنما از بازار"></a>
+                            <br>
+                            <a><img src="../assets/images/google-play-badge.png" height="60" alt="دریافت اپ بارنما از گوگل پلی"></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-5">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer id="footer">
+    <div class="container-fluid footer-container">
+        <div class="row copyright-row bg-dark text-center p-2">
+            <div class="col text-right text-gray-500 mt-3">
+                تمام حقوق این وب سایت برای سامانه‌های هوشمند بارنما محفوظ است.
+            </div>
+            <div class="col text-left">
+                <span class="fa-stack fa-2x text-danger">
+                    <a href="mailto:barnama.org@gmail.com">
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fa fa-envelope fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-telegram fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-instagram fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../assets/js/app.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+</script>
+</body>
+</html>

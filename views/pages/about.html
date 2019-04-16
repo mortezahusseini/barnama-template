@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--links-->
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--script-->
+    <script type="text/javascript" src="../../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <title>درباره ما </title>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Barnama Logo -->
+    <a class="navbar-brand" href="../home.html">
+        <img src="../../assets/images/logo.png" width="170" alt="">
+    </a>
+    <!-- Right navigation -->
+    <ul class="navbar-nav mr-5 d-none d-lg-inline-flex">
+        <li class="nav-item ml-4" data-toggle="tooltip" data-placement="bottom" title="به زودی...">
+            <a class="nav-item nav-link d-block text-center">
+                <img src="../../assets/images/truck.png" class="" alt="truck" height="25">
+                <br>
+                سفارش حمل بار
+            </a>
+        </li>
+        <li class="nav-item dropdown ml-4">
+            <a class="nav-item nav-link d-block text-center" href="../board/board.html">
+                <img src="../../assets/images/monitor.png" class="" alt="monitor" height="25">
+                <br>
+                تابلو بارنما
+            </a>
+        </li>
+        <li class="nav-item ml-2" data-toggle="tooltip" data-placement="bottom" title="به زودی...">
+            <a class="nav-item nav-link d-block text-center">
+                <img src="../../assets/images/box.png" class="" alt="truck" height="25">
+                <br>
+                خرده بار
+            </a>
+        </li>
+    </ul>
+    <!-- Left User / login controller -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav profile-navbar mr-auto">
+            <li class="nav-item ml-4">
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../auth/register.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user text-orange ml-1"></i>
+                            ورود / ثبت نام
+                            <i class="fa fa-angle-down text-orange"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <form action="" method="post" accept-charset="UTF-8">
+                                <div class="form-group text-right dropdown-item-no-link">
+                                    <input type="text" class="form-control" id="mobile" name="username" placeholder="شماره موبایل">
+                                </div>
+                                <div class="form-group text-right dropdown-item-no-link">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="رمز عبور">
+                                </div>
+                                <div class="dropdown-item-no-link">
+                                    <button type="submit" class="btn btn-block btn-primary mb-3">ورود</button>
+                                </div>
+                                <div class="form-check text-right dropdown-item-no-link">
+                                    <input type="checkbox" name="remember" id="remember-me">
+                                    <label for="remember-me">&nbsp;مرا به‌خاطر بسپار</label>
+                                </div>
+                                <a class="dropdown-item text-right dropdown-item-no-link" href="../auth/password/reset.html">
+                                    <i class="fa fa-angle-left ml-1 text-primary"></i>
+                                    بازیابی رمز عبور
+                                </a>
+                            </form>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item-no-link text-right mb-2">حساب کاربری ندارید؟
+                                <a href="../auth/register.html" class="btn btn-block btn-success mt-2">ثبت نام</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Left support -->
+        <ul class="navbar-nav contact-navbar pr-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div>
+                        <div class="icon d-table-cell align-middle"><i class="fa fa-phone fa-flip-horizontal ml-3 fa-1x text-orange"></i></div>
+                        <div class="text d-table-cell align-top text-right">
+                            <strong>تماس با ما</strong>
+                            <br>
+                            <span class="text-gray-500">۰۲۱۵۵۴۵۹۰۳۴</span>
+                        </div>
+                        <div class="icon d-table-cell align-middle"><i class="fa fa-angle-down text-orange"></i></div>
+                    </div>
+                </a>
+                <div class="dropdown-menu text-right">
+                    <div class="text-right dropdown-item-no-link">
+                        پشتیبانی ۲۴ ساعته
+                        <br>
+                        ۰۲۱۵۵۴۵۹۰۳۴
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-right" href="../pages/contact.html">
+                        تماس با ما
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="flex-center position-ref full-height" id="app">
+    <!--<p>حساب شما فعال نشده است. با استفاده از <a href="{{ route('profile.edit') }}" class="alert-link">این لینک</a> پروفایل خود را تکمیل کنید.</p>-->
+    <div class="container">
+        <div class="row my-5 py-2 justify-content-center">
+            <div class="col-lg-10">
+                <div class="row p-3">
+                    <h2 class="d-inline">درباره ما</h2>
+                </div>
+                <hr>
+                <div class="text-right">
+                    <p class="text-justify">
+                        شرکت سامانه‌های هوشمند بارنما از سال 1395 با هدف ساماندهی به بازار حمل و نقل بار آغاز به کار کرد. رویکرد این مجموعه ارتباط بی‌واسطه صاحب کالا و رانندگان ناوگان باری است تا به این شیوه هزینه‌های حمل و نقل شفاف و روند کار حمل بار تسریع شود.
+                    </p>
+                    <h4>اعلام بار در بارنما</h4>
+                    <p class="text-justify">
+                        در بارنما شما می‌توانید هر بار و کالایی که نیازمند حمل آن هستید را به صورت کاملا رایگان ثبت کنید تا رانندگان و شرکت‌های حمل و نقل با دیدن خصوصیات بار با شما تماس بگیرند و کالای شما را حمل کنند.
+                    </p>
+                    <h4>درخواست بار در بارنما</h4>
+                    <p class="text-justify">
+                        کلیه رانندگان ناوگان باری در کشور می‌توانند در هر لحظه و هر مکانی که هستند موقعیت خود را در تابلو درخواست بار بارنما ثبت کنند تا صاحبان کالا و شرکت‌های باربری که نیازمند ناوگان باری هستند با دیدن موقعیت فعلی شما، با شما راننده محترم تماس بگیرند.
+                    </p>
+                    <h4>ثبت آگهی اعلام و درخواست بار</h4>
+                    <p class="text-justify">
+                        برای اعلام بار و یا درخواست بار کافی است در بالای صفحه «اعلام بار رایگان» یا «درخواست بار رایگان» را انتخاب و پس از ثبت نام در بارنما، آگهی خود را ارسال کنید.
+                        به یاد داشته باشید داشتن یک شماره همراه معتبر به همراه کد ملی برای صاحب کالا برای ارسال آگهی اعلام بار ضروری است. رانندگان ناوگان علاوه بر شماره همراه و کد ملی، باید شماره کارت هوشمند خود را نیز وارد نمایند.
+                        بر این اساس مخاطبان می‌توانند از موقعیت بار صاحبان کالا، یا موقعیت رانندگان و ناوگان آن‌ها مطلع شوند با یکدیگر تماس بگیرند.
+                    </p>
+                    <h4>حمل و نقل بی‌واسطه بارنما</h4>
+                    <p class="text-justify">
+                        بارنما صرفا تابلو اعلام و درخواست بار شما کاربران محترم است. شما بی‌واسطه با صاحبان کالا، شرکت‌های حمل بار و رانندگان ارتباط خواهید گرفت و واسطه‌ای در میان نخواهد بود. تعیین قیمت، توافق در خصوص نحوه حمل بار، و سایر جزئیات بدون دخالت بارنما انجام می-شود.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="container-fluid footer-container">
+        <div class="row copyright-row bg-dark text-center p-2">
+            <div class="col text-right text-gray-500 mt-3">
+                تمام حقوق این وب سایت برای سامانه‌های هوشمند بارنما محفوظ است.
+            </div>
+            <div class="col text-left">
+                <span class="fa-stack fa-2x text-danger">
+                    <a href="mailto:barnama.org@gmail.com">
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fa fa-envelope fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-telegram fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-instagram fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../../assets/js/app.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+</script>
+</body>
+</html>

@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--links-->
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--script-->
+    <script type="text/javascript" src="../../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <title> تابلو بارنما </title>
+</head>
+<body>
+
+<!-- header -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Barnama Logo -->
+    <a class="navbar-brand" href="../home.html">
+        <img src="../../assets/images/logo.png" width="170" alt="">
+    </a>
+    <!-- Right navigation -->
+    <ul class="navbar-nav mr-5 d-none d-lg-inline-flex">
+        <li class="nav-item ml-4" data-toggle="tooltip" data-placement="bottom" title="به زودی...">
+            <a class="nav-item nav-link d-block text-center">
+                <img src="../../assets/images/truck.png" class="" alt="truck" height="25">
+                <br>
+                سفارش حمل بار
+            </a>
+        </li>
+        <li class="nav-item dropdown ml-4">
+            <a class="nav-item nav-link d-block text-center" href="#">
+                <img src="../../assets/images/monitor.png" class="" alt="monitor" height="25">
+                <br>
+                تابلو بارنما
+            </a>
+        </li>
+        <li class="nav-item ml-2" data-toggle="tooltip" data-placement="bottom" title="به زودی...">
+            <a class="nav-item nav-link d-block text-center">
+                <img src="../../assets/images/box.png" class="" alt="truck" height="25">
+                <br>
+                خرده بار
+            </a>
+        </li>
+    </ul>
+    <!-- Left User / login controller -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav profile-navbar mr-auto">
+            <li class="nav-item ml-4">
+                <ul class="navbar-nav mr-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../auth/login.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user text-orange ml-1"></i>
+                            ورود / ثبت نام
+                            <i class="fa fa-angle-down text-orange"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <form action="" method="post" accept-charset="UTF-8">
+                                <div class="form-group text-right dropdown-item-no-link">
+                                    <input type="text" class="form-control" id="mobile" name="username" placeholder="شماره موبایل">
+                                </div>
+                                <div class="form-group text-right dropdown-item-no-link">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="رمز عبور">
+                                </div>
+                                <div class="dropdown-item-no-link">
+                                    <button type="submit" class="btn btn-block btn-primary mb-3">ورود</button>
+                                </div>
+                                <div class="form-check text-right dropdown-item-no-link">
+                                    <input type="checkbox" name="remember" id="remember-me">
+                                    <label for="remember-me">&nbsp;مرا به‌خاطر بسپار</label>
+                                </div>
+                                <a class="dropdown-item text-right dropdown-item-no-link" href="../auth/password/reset.html">
+                                    <i class="fa fa-angle-left ml-1 text-primary"></i>
+                                    بازیابی رمز عبور
+                                </a>
+                            </form>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item-no-link text-right mb-2">حساب کاربری ندارید؟
+                                <a href="../auth/register.html" class="btn btn-block btn-success mt-2">ثبت نام</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Left support -->
+        <ul class="navbar-nav contact-navbar pr-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div>
+                        <div class="icon d-table-cell align-middle"><i class="fa fa-phone fa-flip-horizontal ml-3 fa-1x text-orange"></i></div>
+                        <div class="text d-table-cell align-top text-right">
+                            <strong>تماس با ما</strong>
+                            <br>
+                            <span class="text-gray-500">۰۲۱۵۵۴۵۹۰۳۴</span>
+                        </div>
+                        <div class="icon d-table-cell align-middle"><i class="fa fa-angle-down text-orange"></i></div>
+                    </div>
+                </a>
+                <div class="dropdown-menu text-right">
+                    <div class="text-right dropdown-item-no-link">
+                        پشتیبانی ۲۴ ساعته
+                        <br>
+                        ۰۲۱۵۵۴۵۹۰۳۴
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-right" href="../pages/contact.html">
+                        تماس با ما
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- main -->
+<div class="flex-center position-ref full-height" id="app">
+    <!--<p>حساب شما فعال نشده است. با استفاده از <a href="{{ route('profile.edit') }}" class="alert-link">این لینک</a> پروفایل خود را تکمیل کنید.</p>-->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- sidebar -->
+            <div class="col-md-3 col-sm-4 p-2 pb-5 text-right list-filter-sidebar mt-4">
+                <div>
+                    <form>
+                        <div class="card shadow mt-3">
+                            <div class="card-body">
+                                <h6 class="card-title">فیلتر</h6>
+                                <hr>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="allItemRadio" name="filterItem" value="all" checked class="custom-control-input">
+                                    <label class="custom-control-label" for="allItemRadio">نمایش همه</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="requestsRadio" name="filterItem" value="requests" class="custom-control-input">
+                                    <label class="custom-control-label" for="requestsRadio">درخواست‌های بار</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="cargoesRadio" name="filterItem" value="cargoes" class="custom-control-input">
+                                    <label class="custom-control-label" for="cargoesRadio">بارهای ثبت شده</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h6 class="card-title">
+                                    جستجو
+                                    <!--<a class="btn btn-link-secondary text-medium" v-if="showRemoveFilterLink" v-bind:href="routeBack">[حذف فیلتر]</a>-->
+                                </h6>
+                                <hr>
+                                <div class="form-group mt-0 pt-0">
+                                    <label class="float-right text-small mr-2" for="province-original">مبدا</label>
+                                    <select name="province-original" class="form-control custom-select" id="province-original">
+                                        <option selected value="0">استان مبدا</option>
+                                        <option></option>
+                                    </select>
+                                    <label for="city-original"></label>
+                                    <select name="city-original" class="form-control custom-select" id="city-original">
+                                        <option selected value="0">شهر مبدا</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group mt-0 pt-0">
+                                    <label class="float-right text-small mr-2" for="province-destination">مقصد</label>
+                                    <select name="province-destination" class="form-control custom-select" id="province-destination">
+                                        <option selected value="0">استان مقصد</option>
+                                        <option></option>
+                                    </select>
+
+                                    <label for="city-destination"></label>
+                                    <select name="city-destination" class="form-control custom-select" id="city-destination">
+                                        <option selected value="0">شهر مقصد</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="form-group m-0 p-0">
+                                    <label class="float-right text-small mr-2" for="price">کرایه</label>
+                                    <select name="price" class="form-control custom-select" id="price">
+                                        <option selected value="0">نوع قیمت</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+
+                                <br>
+                                <div class="text-left">
+                                    <button type="submit" class="btn rounded btn-primary px-4">جستجو</button>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h6 class="card-title">نوع خودرو</h6>
+                                <hr>
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" id="carRadio" name="filterCar" value="all" class="custom-control-input">
+                                    <label class="custom-control-label" for="carRadio">&#32;همه خودروها</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" name="filterCar" class="custom-control-input">
+                                    <label class="custom-control-label"> تریلی کفی </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- main  bar -->
+            <div class="col-md-9 col-sm-7 mt-4">
+                <div class="card shadow mt-4 mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="card-title">
+                                <div class="col text-right">
+                                    <div class="row">
+                                        <h4 class="h4 mr-3">
+                                            تابلو بارنما
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- titles -->
+                            <div class="col" dir="ltr">
+                                <div class="row">
+                                    <div class="col" dir="rtl">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item text-small d-none d-lg-inline-block">مرتب سازی براساس:</li>
+                                            <li class="list-inline-item"><a href="" class="btn btn-link-primary-active active rounded">جدیدترین</a></li>
+                                            <li class="list-inline-item"><a href="" class="btn btn-link-primary-active rounded">قدیمی‌ترین </a></li>
+                                            <li class="list-inline-item"><a href="" class="btn btn-link-primary-active rounded">کرایه کمترین</a></li>
+                                            <li class="list-inline-item"><a href="" class="btn btn-link-primary-active rounded">کرایه بیشترین</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- board content -->
+                        <div class="row board-container">
+                            <div class="col-12 my-2 board-cargo" >
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row container h-100" style="min-height: 130px">
+                                            <div class="bg-cyan-500 rounded vertical-text text-center">
+                                                درخواست بار
+                                            </div>
+                                            <div class="col-11 p-3 card-text item-container">
+                                                <div class="row">
+                                                    <div class="col-2 d-flex align-items-center text-center">
+                                                        <div class="container">
+                                                            <span class="fa-stack fa-2x text-danger">
+                                                                <a>
+                                                                    <i class="fa fa-circle fa-stack-2x text-gray-200"></i>
+                                                                    <i class="fa fa-truck fa-flip-horizontal fa-stack-1x text-primary"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span> تریلی لبه دار </span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-center text-center">
+                                                        <div class="row container">
+                                                            <div class="col-4 p-0 align-items-center text-center">
+                                                                <span class="mb-2">&nbsp;دولت آباد&nbsp;اصفهان</span>
+                                                                <br>
+                                                                <span class="mb-2">&nbsp;اهواز</span>
+                                                            </div>
+                                                            <div class="col-4 p-0 px-3 d-flex align-items-center text-gray-500">
+                                                                <i class="fa fa-truck fa-flip-horizontal fa-1x"></i>
+                                                                <i class="">.....................</i>
+                                                                <i class="fa fa-map-marker fa-1x"></i>
+                                                            </div>
+                                                            <div class="col-4 p-0 d-flex align-items-center text-left" dir="ltr">
+                                                                <span class="">&nbsp; اهواز&nbsp;خوزستان </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center">
+                                                        <span class="h4 text-green"> ۵۰۰/۰۰۰ <small class="text-small"> تومان</small>
+                                                                    <br>
+                                                                    <small class="text-small"></small>
+                                                                </span>
+                                                        <span class="h4 text-green"></span>
+                                                    </div>
+                                                     <div class="col-2 d-flex align-items-center justify-content-center">
+                                                         <a href="#" class="btn btn-primary rounded">پرداخت</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="item-detail">
+                                                        <a href="#" class="text-dark btn-gray pt-1 px-2" data-toggle="collapse" data-target="#collapse110" aria-expanded="false" aria-controls="collapseDetail110">جزئیات بیشتر<i class="fa fa-angle-down mr-2"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content collapse mt-4" id="collapse110">
+                                        <ul class="nav nav-tabs-custom" id="tab110" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info110" role="tab" aria-controls="home" aria-selected="true">اطلاعات محموله</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact110" role="tab" aria-controls="profile" aria-selected="false">اطلاعات تماس</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-2" id="tabContent110">
+                                            <div class="tab-pane fade show active text-right" id="info110" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row p-3">
+                                                    <div class="col">
+                                                        وزن محموله:
+                                                    </div>
+                                                    <div class="col">نام محموله:</div>
+                                                    <div class="col">توضیحات: </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="contact110" role="tabpanel" aria-labelledby="profile-tab">
+                                                <div class="row p-3">
+                                                    <div class="col text-right">
+                                                        شماره تماس: ۸۷۲۸۵۹۴۲۷
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-2 board-cargo">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row container h-100" style="min-height: 130px">
+                                            <div class="bg-lime-500 rounded vertical-text text-center">
+                                                صاحب بار
+                                            </div>
+                                            <div class="col-11 p-3 card-text item-container">
+                                                <div class="row">
+                                                    <div class="col-2 d-flex align-items-center text-center">
+                                                        <div class="container">
+                                                            <span class="fa-stack fa-2x text-danger">
+                                                                <a>
+                                                                    <i class="fa fa-circle fa-stack-2x text-gray-200"></i>
+                                                                    <i class="fa fa-truck fa-flip-horizontal fa-stack-1x text-primary"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span> تریلی کفی </span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-center text-center">
+                                                        <div class="row container">
+                                                            <div class="col-4 p-0 align-items-center text-center">
+                                                                <span class="mb-2">&nbsp;دولت آباد&nbsp;اصفهان</span>
+                                                                <br>
+                                                                <span class="mb-2">&nbsp;اهواز</span>
+                                                            </div>
+                                                            <div class="col-4 p-0 px-3 d-flex align-items-center text-gray-500">
+                                                                <i class="fa fa-truck fa-flip-horizontal fa-1x"></i>
+                                                                <i class="">.....................</i>
+                                                                <i class="fa fa-map-marker  fa-1x"></i>
+                                                            </div>
+                                                            <div class="col-4 p-0 d-flex align-items-center text-left" dir="ltr">
+                                                                <span class="">&nbsp; اهواز&nbsp;خوزستان </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center">
+                                                        <span class="h4 text-green"> ۵۰۰/۰۰۰ <small class="text-small"> تومان</small>
+                                                                    <br>
+                                                                    <small class="text-small"></small>
+                                                                </span>
+
+                                                        <span class="h4 text-green"></span>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                                        <a href="#" class="btn btn-primary rounded">پرداخت</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="item-detail">
+                                                        <a href="#" class="text-dark btn-gray pt-1 px-2" data-toggle="collapse" data-target="#collapse111" aria-expanded="false" aria-controls="collapseDetail111">جزئیات بیشتر<i class="fa fa-angle-down mr-2"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content collapse mt-4" id="collapse111">
+                                        <ul class="nav nav-tabs-custom" id="tab111" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info111" role="tab" aria-controls="home" aria-selected="true">اطلاعات محموله</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact111" role="tab" aria-controls="profile" aria-selected="false">اطلاعات تماس</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-2" id="tabContent111">
+                                            <div class="tab-pane fade show active text-right" id="info111" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row p-3">
+                                                    <div class="col">
+                                                        وزن محموله:
+                                                    </div>
+                                                    <div class="col">نام محموله:</div>
+                                                    <div class="col">توضیحات: </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="contact111" role="tabpanel" aria-labelledby="profile-tab">
+                                                <div class="row p-3">
+                                                    <div class="col text-right">
+                                                        شماره تماس: ۸۷۲۸۵۹۴۲۷
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-2 board-cargo" >
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row container h-100" style="min-height: 130px">
+                                            <div class="bg-cyan-500 rounded vertical-text text-center">
+                                                درخواست بار
+                                            </div>
+                                            <div class="col-11 p-3 card-text item-container">
+                                                <div class="row">
+                                                    <div class="col-2 d-flex align-items-center text-center">
+                                                        <div class="container">
+                                                            <span class="fa-stack fa-2x text-danger">
+                                                                <a>
+                                                                    <i class="fa fa-circle fa-stack-2x text-gray-200"></i>
+                                                                    <i class="fa fa-truck fa-flip-horizontal fa-stack-1x text-primary"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span> تریلی کفی </span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-center text-center">
+                                                        <div class="row container">
+                                                            <div class="col-4 p-0 align-items-center text-center">
+                                                                <span class="mb-2">&nbsp;دولت آباد&nbsp;اصفهان</span>
+                                                                <br>
+                                                                <span class="mb-2">&nbsp;اهواز</span>
+                                                            </div>
+                                                            <div class="col-4 p-0 px-3 d-flex align-items-center text-gray-500">
+                                                                <i class="fa fa-truck fa-flip-horizontal fa-1x"></i>
+                                                                <i class="">.....................</i>
+                                                                <i class="fa fa-map-marker fa-1x"></i>
+                                                            </div>
+                                                            <div class="col-4 p-0 d-flex align-items-center text-left" dir="ltr">
+                                                                <span class="">&nbsp; اهواز&nbsp;خوزستان </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center">
+                                                        <span class="h4 text-green"> ۵۰۰/۰۰۰ <small class="text-small"> تومان</small>
+                                                                    <br>
+                                                                    <small class="text-small"></small>
+                                                                </span>
+                                                        <span class="h4 text-green"></span>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                                        <a href="#" class="btn btn-primary rounded">پرداخت</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="item-detail">
+                                                        <a href="#" class="text-dark btn-gray pt-1 px-2" data-toggle="collapse" data-target="#collapse112" aria-expanded="false" aria-controls="collapseDetail112">جزئیات بیشتر<i class="fa fa-angle-down mr-2"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content collapse mt-4" id="collapse112">
+                                        <ul class="nav nav-tabs-custom" id="tab112" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info112" role="tab" aria-controls="home" aria-selected="true">اطلاعات محموله</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact112" role="tab" aria-controls="profile" aria-selected="false">اطلاعات تماس</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-2" id="tabContent112">
+                                            <div class="tab-pane fade show active text-right" id="info112" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row p-3">
+                                                    <div class="col">
+                                                        وزن محموله:
+                                                    </div>
+                                                    <div class="col">نام محموله:</div>
+                                                    <div class="col">توضیحات: </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="contact112" role="tabpanel" aria-labelledby="profile-tab">
+                                                <div class="row p-3">
+                                                    <div class="col text-right">
+                                                        شماره تماس: ۸۷۲۸۵۹۴۲۷
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-2 board-cargo">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row container h-100" style="min-height: 130px">
+                                            <div class="bg-lime-500 rounded vertical-text text-center">
+                                                صاحب بار
+                                            </div>
+                                            <div class="col-11 p-3 card-text item-container">
+                                                <div class="row">
+                                                    <div class="col-2 d-flex align-items-center text-center">
+                                                        <div class="container">
+                                                            <span class="fa-stack fa-2x text-danger">
+                                                                <a>
+                                                                    <i class="fa fa-circle fa-stack-2x text-gray-200"></i>
+                                                                    <i class="fa fa-truck fa-flip-horizontal fa-stack-1x text-primary"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span> تریلی کفی </span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-center text-center">
+                                                        <div class="row container">
+                                                            <div class="col-4 p-0 align-items-center text-center">
+                                                                <span class="mb-2">&nbsp;دولت آباد&nbsp;اصفهان</span>
+                                                                <br>
+                                                                <span class="mb-2">&nbsp;اهواز</span>
+                                                            </div>
+                                                            <div class="col-4 p-0 px-3 d-flex align-items-center text-gray-500">
+                                                                <i class="fa fa-truck fa-flip-horizontal fa-1x"></i>
+                                                                <i class="">.....................</i>
+                                                                <i class="fa fa-map-marker  fa-1x"></i>
+                                                            </div>
+                                                            <div class="col-4 p-0 d-flex align-items-center text-left" dir="ltr">
+                                                                <span class="">&nbsp; اهواز&nbsp;خوزستان </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center">
+                                                        <span class="h4 text-green"> ۵۰۰/۰۰۰ <small class="text-small"> تومان</small>
+                                                                    <br>
+                                                                    <small class="text-small"></small>
+                                                                </span>
+
+                                                        <span class="h4 text-green"></span>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                                        <a href="#" class="btn btn-primary rounded">پرداخت</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="item-detail">
+                                                        <a href="#" class="text-dark btn-gray pt-1 px-2" data-toggle="collapse" data-target="#collapse113" aria-expanded="false" aria-controls="collapseDetail113">جزئیات بیشتر<i class="fa fa-angle-down mr-2"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content collapse mt-4" id="collapse113">
+                                        <ul class="nav nav-tabs-custom" id="tab113" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info113" role="tab" aria-controls="home" aria-selected="true">اطلاعات محموله</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact113" role="tab" aria-controls="profile" aria-selected="false">اطلاعات تماس</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-2" id="tabContent113">
+                                            <div class="tab-pane fade show active text-right" id="info113" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row p-3">
+                                                    <div class="col">
+                                                        وزن محموله:
+                                                    </div>
+                                                    <div class="col">نام محموله:</div>
+                                                    <div class="col">توضیحات: </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="contact113" role="tabpanel" aria-labelledby="profile-tab">
+                                                <div class="row p-3">
+                                                    <div class="col text-right">
+                                                        شماره تماس: ۸۷۲۸۵۹۴۲۷
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-2 board-cargo" >
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row container h-100" style="min-height: 130px">
+                                            <div class="bg-cyan-500 rounded vertical-text text-center">
+                                                درخواست بار
+                                            </div>
+                                            <div class="col-11 p-3 card-text item-container">
+                                                <div class="row">
+                                                    <div class="col-2 d-flex align-items-center text-center">
+                                                        <div class="container">
+                                                            <span class="fa-stack fa-2x text-danger">
+                                                                <a>
+                                                                    <i class="fa fa-circle fa-stack-2x text-gray-200"></i>
+                                                                    <i class="fa fa-truck fa-flip-horizontal fa-stack-1x text-primary"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span> تریلی کفی </span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-center text-center">
+                                                        <div class="row container">
+                                                            <div class="col-4 p-0 align-items-center text-center">
+                                                                <span class="mb-2">&nbsp;دولت آباد&nbsp;اصفهان</span>
+                                                                <br>
+                                                                <span class="mb-2">&nbsp;اهواز</span>
+                                                            </div>
+                                                            <div class="col-4 p-0 px-3 d-flex align-items-center text-gray-500">
+                                                                <i class="fa fa-truck fa-flip-horizontal fa-1x"></i>
+                                                                <i class="">.....................</i>
+                                                                <i class="fa fa-map-marker fa-1x"></i>
+                                                            </div>
+                                                            <div class="col-4 p-0 d-flex align-items-center text-left" dir="ltr">
+                                                                <span class="">&nbsp; اهواز&nbsp;خوزستان </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center">
+                                                        <span class="h4 text-green"> ۵۰۰/۰۰۰ <small class="text-small"> تومان</small>
+                                                                    <br>
+                                                                    <small class="text-small"></small>
+                                                                </span>
+                                                        <span class="h4 text-green"></span>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                                        <a href="#" class="btn btn-primary rounded">پرداخت</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="item-detail">
+                                                        <a href="#" class="text-dark btn-gray pt-1 px-2" data-toggle="collapse" data-target="#collapse114" aria-expanded="false" aria-controls="collapseDetail114">جزئیات بیشتر<i class="fa fa-angle-down mr-2"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content collapse mt-4" id="collapse114">
+                                        <ul class="nav nav-tabs-custom" id="tab114" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info114" role="tab" aria-controls="home" aria-selected="true">اطلاعات محموله</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact114" role="tab" aria-controls="profile" aria-selected="false">اطلاعات تماس</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-2" id="tabContent114">
+                                            <div class="tab-pane fade show active text-right" id="info114" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row p-3">
+                                                    <div class="col">
+                                                        وزن محموله:
+                                                    </div>
+                                                    <div class="col">نام محموله:</div>
+                                                    <div class="col">توضیحات: </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="contact114" role="tabpanel" aria-labelledby="profile-tab">
+                                                <div class="row p-3">
+                                                    <div class="col text-right">
+                                                        شماره تماس: ۸۷۲۸۵۹۴۲۷
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-2 board-cargo">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row container h-100" style="min-height: 130px">
+                                            <div class="bg-lime-500 rounded vertical-text text-center">
+                                                صاحب بار
+                                            </div>
+                                            <div class="col-11 p-3 card-text item-container">
+                                                <div class="row">
+                                                    <div class="col-2 d-flex align-items-center text-center">
+                                                        <div class="container">
+                                                            <span class="fa-stack fa-2x text-danger">
+                                                                <a>
+                                                                    <i class="fa fa-circle fa-stack-2x text-gray-200"></i>
+                                                                    <i class="fa fa-truck fa-flip-horizontal fa-stack-1x text-primary"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span> تریلی کفی </span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-center text-center">
+                                                        <div class="row container">
+                                                            <div class="col-4 p-0 align-items-center text-center">
+                                                                <span class="mb-2">&nbsp;دولت آباد&nbsp;اصفهان</span>
+                                                                <br>
+                                                                <span class="mb-2">&nbsp;اهواز</span>
+                                                            </div>
+                                                            <div class="col-4 p-0 px-3 d-flex align-items-center text-gray-500">
+                                                                <i class="fa fa-truck fa-flip-horizontal fa-1x"></i>
+                                                                <i class="">.....................</i>
+                                                                <i class="fa fa-map-marker  fa-1x"></i>
+                                                            </div>
+                                                            <div class="col-4 p-0 d-flex align-items-center text-left" dir="ltr">
+                                                                <span class="">&nbsp; اهواز&nbsp;خوزستان </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center">
+                                                        <span class="h4 text-green"> ۵۰۰/۰۰۰ <small class="text-small"> تومان</small>
+                                                                    <br>
+                                                                    <small class="text-small"></small>
+                                                                </span>
+
+                                                        <span class="h4 text-green"></span>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                                        <a href="#" class="btn btn-primary rounded">پرداخت</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="item-detail">
+                                                        <a href="#" class="text-dark btn-gray pt-1 px-2" data-toggle="collapse" data-target="#collapse115" aria-expanded="false" aria-controls="collapseDetail115">جزئیات بیشتر<i class="fa fa-angle-down mr-2"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content collapse mt-4" id="collapse115">
+                                        <ul class="nav nav-tabs-custom" id="tab115" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info115" role="tab" aria-controls="home" aria-selected="true">اطلاعات محموله</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact115" role="tab" aria-controls="profile" aria-selected="false">اطلاعات تماس</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-2" id="tabContent115">
+                                            <div class="tab-pane fade show active text-right" id="info115" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row p-3">
+                                                    <div class="col">
+                                                        وزن محموله:
+                                                    </div>
+                                                    <div class="col">نام محموله:</div>
+                                                    <div class="col">توضیحات: </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="contact115" role="tabpanel" aria-labelledby="profile-tab">
+                                                <div class="row p-3">
+                                                    <div class="col text-right">
+                                                        شماره تماس: ۸۷۲۸۵۹۴۲۷
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-2 board-cargo" >
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row container h-100" style="min-height: 130px">
+                                            <div class="bg-cyan-500 rounded vertical-text text-center">
+                                                درخواست بار
+                                            </div>
+                                            <div class="col-11 p-3 card-text item-container">
+                                                <div class="row">
+                                                    <div class="col-2 d-flex align-items-center text-center">
+                                                        <div class="container">
+                                                            <span class="fa-stack fa-2x text-danger">
+                                                                <a>
+                                                                    <i class="fa fa-circle fa-stack-2x text-gray-200"></i>
+                                                                    <i class="fa fa-truck fa-flip-horizontal fa-stack-1x text-primary"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span> تریلی کفی </span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-center text-center">
+                                                        <div class="row container">
+                                                            <div class="col-4 p-0 align-items-center text-center">
+                                                                <span class="mb-2">&nbsp;دولت آباد&nbsp;اصفهان</span>
+                                                                <br>
+                                                                <span class="mb-2">&nbsp;اهواز</span>
+                                                            </div>
+                                                            <div class="col-4 p-0 px-3 d-flex align-items-center text-gray-500">
+                                                                <i class="fa fa-truck fa-flip-horizontal fa-1x"></i>
+                                                                <i class="">.....................</i>
+                                                                <i class="fa fa-map-marker fa-1x"></i>
+                                                            </div>
+                                                            <div class="col-4 p-0 d-flex align-items-center text-left" dir="ltr">
+                                                                <span class="">&nbsp; اهواز&nbsp;خوزستان </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center">
+                                                        <span class="h4 text-green"> ۵۰۰/۰۰۰ <small class="text-small"> تومان</small>
+                                                                    <br>
+                                                                    <small class="text-small"></small>
+                                                                </span>
+                                                        <span class="h4 text-green"></span>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                                        <a href="#" class="btn btn-primary rounded">پرداخت</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="item-detail">
+                                                        <a href="#" class="text-dark btn-gray pt-1 px-2" data-toggle="collapse" data-target="#collapse116" aria-expanded="false" aria-controls="collapseDetail116">جزئیات بیشتر<i class="fa fa-angle-down mr-2"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content collapse mt-4" id="collapse116">
+                                        <ul class="nav nav-tabs-custom" id="tab116" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info116" role="tab" aria-controls="home" aria-selected="true">اطلاعات محموله</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact116" role="tab" aria-controls="profile" aria-selected="false">اطلاعات تماس</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-2" id="tabContent116">
+                                            <div class="tab-pane fade show active text-right" id="info116" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row p-3">
+                                                    <div class="col">
+                                                        وزن محموله:
+                                                    </div>
+                                                    <div class="col">نام محموله:</div>
+                                                    <div class="col">توضیحات: </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="contact116" role="tabpanel" aria-labelledby="profile-tab">
+                                                <div class="row p-3">
+                                                    <div class="col text-right">
+                                                        شماره تماس: ۸۷۲۸۵۹۴۲۷
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-2 board-cargo">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row container h-100" style="min-height: 130px">
+                                            <div class="bg-lime-500 rounded vertical-text text-center">
+                                                صاحب بار
+                                            </div>
+                                            <div class="col-11 p-3 card-text item-container">
+                                                <div class="row">
+                                                    <div class="col-2 d-flex align-items-center text-center">
+                                                        <div class="container">
+                                                            <span class="fa-stack fa-2x text-danger">
+                                                                <a>
+                                                                    <i class="fa fa-circle fa-stack-2x text-gray-200"></i>
+                                                                    <i class="fa fa-truck fa-flip-horizontal fa-stack-1x text-primary"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span> تریلی کفی </span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-center text-center">
+                                                        <div class="row container">
+                                                            <div class="col-4 p-0 align-items-center text-center">
+                                                                <span class="mb-2">&nbsp;دولت آباد&nbsp;اصفهان</span>
+                                                                <br>
+                                                                <span class="mb-2">&nbsp;اهواز</span>
+                                                            </div>
+                                                            <div class="col-4 p-0 px-3 d-flex align-items-center text-gray-500">
+                                                                <i class="fa fa-truck fa-flip-horizontal fa-1x"></i>
+                                                                <i class="">.....................</i>
+                                                                <i class="fa fa-map-marker  fa-1x"></i>
+                                                            </div>
+                                                            <div class="col-4 p-0 d-flex align-items-center text-left" dir="ltr">
+                                                                <span class="">&nbsp; اهواز&nbsp;خوزستان </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center">
+                                                        <span class="h4 text-green"> ۵۰۰/۰۰۰ <small class="text-small"> تومان</small>
+                                                                    <br>
+                                                                    <small class="text-small"></small>
+                                                                </span>
+
+                                                        <span class="h4 text-green"></span>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                                        <a href="#" class="btn btn-primary rounded">پرداخت</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="item-detail">
+                                                        <a href="#" class="text-dark btn-gray pt-1 px-2" data-toggle="collapse" data-target="#collapse117" aria-expanded="false" aria-controls="collapseDetail117">جزئیات بیشتر<i class="fa fa-angle-down mr-2"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content collapse mt-4" id="collapse117">
+                                        <ul class="nav nav-tabs-custom" id="tab117" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info117" role="tab" aria-controls="home" aria-selected="true">اطلاعات محموله</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact117" role="tab" aria-controls="profile" aria-selected="false">اطلاعات تماس</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-2" id="tabContent117">
+                                            <div class="tab-pane fade show active text-right" id="info117" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row p-3">
+                                                    <div class="col">
+                                                        وزن محموله:
+                                                    </div>
+                                                    <div class="col">نام محموله:</div>
+                                                    <div class="col">توضیحات: </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="contact117" role="tabpanel" aria-labelledby="profile-tab">
+                                                <div class="row p-3">
+                                                    <div class="col text-right">
+                                                        شماره تماس: ۸۷۲۸۵۹۴۲۷
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-2 board-cargo" >
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row container h-100" style="min-height: 130px">
+                                            <div class="bg-cyan-500 rounded vertical-text text-center">
+                                                درخواست بار
+                                            </div>
+                                            <div class="col-11 p-3 card-text item-container">
+                                                <div class="row">
+                                                    <div class="col-2 d-flex align-items-center text-center">
+                                                        <div class="container">
+                                                            <span class="fa-stack fa-2x text-danger">
+                                                                <a>
+                                                                    <i class="fa fa-circle fa-stack-2x text-gray-200"></i>
+                                                                    <i class="fa fa-truck fa-flip-horizontal fa-stack-1x text-primary"></i>
+                                                                </a>
+                                                                </span>
+                                                            <span> تریلی کفی </span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-center text-center">
+                                                        <div class="row container">
+                                                            <div class="col-4 p-0 align-items-center text-center">
+                                                                <span class="mb-2">&nbsp;دولت آباد&nbsp;اصفهان</span>
+                                                                <br>
+                                                                <span class="mb-2">&nbsp;اهواز</span>
+                                                            </div>
+                                                            <div class="col-4 p-0 px-3 d-flex align-items-center text-gray-500">
+                                                                <i class="fa fa-truck fa-flip-horizontal fa-1x"></i>
+                                                                <i class="">.....................</i>
+                                                                <i class="fa fa-map-marker fa-1x"></i>
+                                                            </div>
+                                                            <div class="col-4 p-0 d-flex align-items-center text-left" dir="ltr">
+                                                                <span class="">&nbsp; اهواز&nbsp;خوزستان </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center">
+                                                        <span class="h4 text-green"> ۵۰۰/۰۰۰ <small class="text-small"> تومان</small>
+                                                                    <br>
+                                                                    <small class="text-small"></small>
+                                                                </span>
+                                                        <span class="h4 text-green"></span>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                                        <a href="#" class="btn btn-primary rounded">پرداخت</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="item-detail">
+                                                        <a href="#" class="text-dark btn-gray pt-1 px-2" data-toggle="collapse" data-target="#collapse118" aria-expanded="false" aria-controls="collapseDetail118">جزئیات بیشتر<i class="fa fa-angle-down mr-2"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content collapse mt-4" id="collapse118">
+                                        <ul class="nav nav-tabs-custom" id="tab118" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info118" role="tab" aria-controls="home" aria-selected="true">اطلاعات محموله</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact118" role="tab" aria-controls="profile" aria-selected="false">اطلاعات تماس</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-2" id="tabContent118">
+                                            <div class="tab-pane fade show active text-right" id="info118" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row p-3">
+                                                    <div class="col">
+                                                        وزن محموله:
+                                                    </div>
+                                                    <div class="col">نام محموله:</div>
+                                                    <div class="col">توضیحات: </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="contact118" role="tabpanel" aria-labelledby="profile-tab">
+                                                <div class="row p-3">
+                                                    <div class="col text-right">
+                                                        شماره تماس: ۸۷۲۸۵۹۴۲۷
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-2 board-cargo">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row container h-100" style="min-height: 130px">
+                                            <div class="bg-lime-500 rounded vertical-text text-center">
+                                                صاحب بار
+                                            </div>
+                                            <div class="col-11 p-3 card-text item-container">
+                                                <div class="row">
+                                                    <div class="col-2 d-flex align-items-center text-center">
+                                                        <div class="container">
+                                                            <span class="fa-stack fa-2x text-danger">
+                                                                <a>
+                                                                    <i class="fa fa-circle fa-stack-2x text-gray-200"></i>
+                                                                    <i class="fa fa-truck fa-flip-horizontal fa-stack-1x text-primary"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span> تریلی کفی </span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-center text-center">
+                                                        <div class="row container">
+                                                            <div class="col-4 p-0 align-items-center text-center">
+                                                                <span class="mb-2">&nbsp;دولت آباد&nbsp;اصفهان</span>
+                                                                <br>
+                                                                <span class="mb-2">&nbsp;اهواز</span>
+                                                            </div>
+                                                            <div class="col-4 p-0 px-3 d-flex align-items-center text-gray-500">
+                                                                <i class="fa fa-truck fa-flip-horizontal fa-1x"></i>
+                                                                <i class="">.....................</i>
+                                                                <i class="fa fa-map-marker  fa-1x"></i>
+                                                            </div>
+                                                            <div class="col-4 p-0 d-flex align-items-center text-left" dir="ltr">
+                                                                <span class="">&nbsp; اهواز&nbsp;خوزستان </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center">
+                                                        <span class="h4 text-green"> ۵۰۰/۰۰۰ <small class="text-small"> تومان</small>
+                                                                    <br>
+                                                                    <small class="text-small"></small>
+                                                                </span>
+
+                                                        <span class="h4 text-green"></span>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                                        <a href="#" class="btn btn-primary rounded">پرداخت</a>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="item-detail">
+                                                        <a href="#" class="text-dark btn-gray pt-1 px-2" data-toggle="collapse" data-target="#collapse119" aria-expanded="false" aria-controls="collapseDetail119">جزئیات بیشتر<i class="fa fa-angle-down mr-2"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content collapse mt-4" id="collapse119">
+                                        <ul class="nav nav-tabs-custom" id="tab119" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info119" role="tab" aria-controls="home" aria-selected="true">اطلاعات محموله</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact119" role="tab" aria-controls="profile" aria-selected="false">اطلاعات تماس</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-2" id="tabContent119">
+                                            <div class="tab-pane fade show active text-right" id="info119" role="tabpanel" aria-labelledby="home-tab">
+                                                <div class="row p-3">
+                                                    <div class="col">
+                                                        وزن محموله:
+                                                    </div>
+                                                    <div class="col">نام محموله:</div>
+                                                    <div class="col">توضیحات: </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="contact119" role="tabpanel" aria-labelledby="profile-tab">
+                                                <div class="row p-3">
+                                                    <div class="col text-right">
+                                                        شماره تماس: ۸۷۲۸۵۹۴۲۷
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="justify-content-center row" dir="ltr">
+                            <ul class="pagination" role="navigation">
+                                <li class="page-item disabled" aria-disabled="true" aria-label="&amp;laquo; قبلی">
+                                    <span class="page-link" aria-hidden="true">&lsaquo;</span>
+                                </li>
+                                <li class="page-item active" aria-current="page"><span class="page-link">۱</span></li>
+                                <li class="page-item"><a class="page-link" href="http://barnama.org/board?page=2">۲</a></li>
+                                <li class="page-item"><a class="page-link" href="http://barnama.org/board?page=3">۳</a></li>
+                                <li class="page-item"><a class="page-link" href="http://barnama.org/board?page=4">۴</a></li>
+                                <li class="page-item"><a class="page-link" href="http://barnama.org/board?page=5">۵</a></li>
+                                <li class="page-item"><a class="page-link" href="http://barnama.org/board?page=6">۶</a></li>
+                                <li class="page-item"><a class="page-link" href="http://barnama.org/board?page=7">۷</a></li>
+                                <li class="page-item"><a class="page-link" href="http://barnama.org/board?page=8">۸</a></li>
+                                <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span></li>
+                                <li class="page-item"><a class="page-link" href="http://barnama.org/board?page=15">۱۵</a></li>
+                                <li class="page-item"><a class="page-link" href="http://barnama.org/board?page=16">۱۶</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="http://barnama.org/board?page=2" rel="next" aria-label="بعدی &amp;raquo;">&rsaquo;</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<footer id="footer">
+    <div class="container-fluid footer-container">
+        <div class="row copyright-row bg-dark text-center p-2">
+            <div class="col text-right text-gray-500 mt-3">
+                تمام حقوق این وب سایت برای سامانه‌های هوشمند بارنما محفوظ است.
+            </div>
+            <div class="col text-left">
+                <span class="fa-stack fa-2x text-danger">
+                    <a href="mailto:barnama.org@gmail.com">
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fa fa-envelope fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-telegram fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-instagram fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+                <span class="fa-stack fa-2x text-danger">
+                    <a>
+                        <i class="fa fa-circle fa-stack-2x text-gray-700"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x text-gray-500"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../../assets/js/app.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+</script>
+</body>
+</html>
